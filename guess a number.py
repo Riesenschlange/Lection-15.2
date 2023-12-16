@@ -1,8 +1,11 @@
 import random
 import time
 number = random.randint(1, 100)
-print("Я загадал определенное число. Сможете ли Вы его угадать?")
+print("Добро пожаловать в числовую угадайку. Я загадал определенное число")
+time.sleep(0.5)
+print("Сможете ли Вы его угадать?")
 while True:
+    time.sleep(0.5)
     print("Введите Вашу догадку: ")
     user_number = int(input())
     if user_number > number:
