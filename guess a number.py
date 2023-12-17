@@ -1,16 +1,21 @@
 import random
 import time
-number = random.randint(1, 100)
-print("Добро пожаловать в числовую угадайку. Я загадал определенное число от 1 до 100 включительно.")
+print("Добро пожаловать в числовую угадайку. Я могу загадывать определенные числа в диапазоне от 1 до того числа,"
+      "которое хотите Вы.")
 time.sleep(0.5)
-print("Сможете ли Вы его угадать?")
+print("Какую верхнюю границу Вы бы хотели указать?")
+ceil = int(input())
+number = random.randint(1, ceil)
+time.sleep(0.5)
+print("Здорово! Я загадал число в указанном Вами диапазоне. Сможете ли Вы его угадать?")
+
 def is_valid(num):
     return num.isdigit() and 1 <= int(num) <= 100
 
 def input_number():
     while True:
         time.sleep(0.5)
-        user_number = input("Введите Вашу догадку от 1 до 100 включительно: ")
+        user_number = input("Введите Вашу догадку в выбранном Вами диапазоне: ")
         if is_valid(user_number) == True:
             return int(user_number)
         else:
