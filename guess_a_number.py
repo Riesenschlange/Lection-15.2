@@ -10,7 +10,7 @@ time.sleep(0.5)
 print("Здорово! Я загадал число в указанном Вами диапазоне. Сможете ли Вы его угадать?")
 
 def is_valid(num):
-    return num.isdigit() and 1 <= int(num) <= 100
+    return num.isdigit() and 1 <= int(num) <= ceil
 
 def input_number():
     while True:
